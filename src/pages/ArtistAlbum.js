@@ -43,7 +43,6 @@ const ArtistAlbum = (props) => {
     return (
         <div>
             <span>error occurred</span>
-            <button>Go Back</button>
         </div>
     );
 }
