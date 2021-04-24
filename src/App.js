@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route} from 'react-router'
+import ArtistSearch from "./pages/ArtistSearch";
+import ArtistAlbums from "./pages/ArtistAlbums";
+import ArtistAlbum from "./pages/ArtistAlbum";
+import backgroundSvg from './assets/svgexport-3.svg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <div style={{
+            padding: '20px',
+            backgroundImage: `url(${backgroundSvg})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+
+        }}>
+            <Route exact path={'/'} render={() => <ArtistSearch/>}/>
+            <Route exact path={'/albums'} render={() => <ArtistAlbums/>}/>
+            <Route exact path={'/albums/album'} render={() => <ArtistAlbum/>}/>
+        </div>
+    );
 }
 
 export default App;
+
