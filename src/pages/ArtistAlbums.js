@@ -9,9 +9,7 @@ const ArtistAlbums = (props) => {
     const hasArtistAlbums = props.artistAlbums.length > 0
     const artistAlbums = hasArtistAlbums &&
         <ItemList items={props.artistAlbums} navigateTo={'/albums/album'} onItemClick={props.selectAAlbum}/>
-
-    console.log('ArtistAlbums rendered')
-
+    
     return (
         <Row align={'middle'} justify={'center'}>
             <Col span={24}>

@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import ItemList from "../components/items/ItemList";
 import Search from "../components/search/Search";
 import InfiniteScroll from "react-infinite-scroll-component";
-import {Row} from "../components/antd/antd";
 
 const ArtistSearch = (props) => {
     const hasSearchResult = props.searchResult.length > 0
@@ -28,9 +27,6 @@ const ArtistSearch = (props) => {
     return (
         <div>
             <Search/>
-            <Row justify={'center'}>
-                {'no results'}
-            </Row>
         </div>
     );
 }

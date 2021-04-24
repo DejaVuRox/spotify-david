@@ -13,7 +13,6 @@ const ArtistAlbum = (props) => {
             <span key={artist.id}>{artist.name}</span>
         ))
 
-        console.log('artistAlbum rendered')
 
         return (
             <Row>
